@@ -1,5 +1,5 @@
 FROM nginx
 MAINTAINER Camptocamp
 
-COPY etc/odoo_params.conf /etc/nginx/odoo_params.conf
+COPY etc/odoo_params.conf /etc/nginx/
 COPY etc/nginx.conf /etc/nginx/nginx.conf
