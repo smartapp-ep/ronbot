@@ -1,0 +1,17 @@
+# ARG version=9.0
+
+# FROM odoo:$version
+
+FROM itprojectsllc/odoo-runbot-docker
+
+USER root
+RUN echo "Asia/shanghai" > /etc/timezone;
+
+ARG version=9.0 
+RUN if [ "$version" = "9.0"]; \
+    then \
+      # export SOMEVAR=hello; \
+      git  -C /mnt/runbot-addons/ checkout -b $version origin/$version \
+    fi 
+    
+USER odoo
