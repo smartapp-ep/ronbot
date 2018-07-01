@@ -42,6 +42,7 @@ RUN touch /var/log/nginx/error.log && \
 
 
 ENV BUILD_DATE=2016_11_03
+ARG version=9.0
 
 RUN git clone -b $version https://github.com/it-projects-llc/runbot-addons.git /mnt/runbot-addons && \
     pip install --upgrade pylint && \
