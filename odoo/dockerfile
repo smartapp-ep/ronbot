@@ -12,6 +12,6 @@ RUN if [ "$version" = "9.0"]; \
     then \
       # export SOMEVAR=hello; \
       git  -C /mnt/runbot-addons/ checkout -b $version origin/$version \
-    fi 
+    fi \
     
 USER odoo
