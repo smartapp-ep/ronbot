@@ -10,6 +10,6 @@ RUN echo "Asia/shanghai" > /etc/timezone;
 ARG version=9.0 
 RUN if [ "$version" = "9.0"]; \
     then git  -C /mnt/runbot-addons/ checkout -b $version origin/$version; \
-    fi \
+    fi 
     
 USER odoo
