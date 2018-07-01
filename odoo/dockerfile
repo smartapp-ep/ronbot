@@ -1,4 +1,8 @@
-FROM odoo:9.0
+# ARG var
+# ENV var=${var}
+
+ARG version=9.0
+FROM odoo:$version
 
 USER root
 
@@ -39,7 +43,7 @@ RUN touch /var/log/nginx/error.log && \
 
 ENV BUILD_DATE=2016_11_03
 
-RUN git clone -b 9.0 https://github.com/it-projects-llc/runbot-addons.git /mnt/runbot-addons && \
+RUN git clone -b $version https://github.com/it-projects-llc/runbot-addons.git /mnt/runbot-addons && \
     pip install --upgrade pylint && \
     pip install --upgrade git+https://github.com/oca/pylint-odoo.git && \
     git clone https://github.com/odoo/odoo-extra.git /mnt/odoo-extra && \
