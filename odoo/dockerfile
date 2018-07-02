@@ -46,9 +46,9 @@ RUN touch /var/log/nginx/error.log && \
 ENV BUILD_DATE=2016_11_03
 ARG version=9.0
 
-RUN git clone -b $version https://github.com/it-projects-llc/runbot-addons.git /mnt/runbot-addons && \
-    pip install --upgrade pylint && \
-    pip install --upgrade git+https://github.com/oca/pylint-odoo.git && \
+RUN git clone -b $version https://github.com/OCA/runbot-addons.git /mnt/runbot-addons && \
+    # pip install --upgrade pylint && \
+    # pip install --upgrade git+https://github.com/oca/pylint-odoo.git && \
     git clone https://github.com/odoo/odoo-extra.git /mnt/odoo-extra && \
     rm -rf /mnt/odoo-extra/website_twitter_wall
 
