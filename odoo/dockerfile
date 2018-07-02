@@ -6,6 +6,8 @@ FROM odoo:$version
 
 USER root
 
+RUN echo "Asia/shanghai" > /etc/timezone;
+
 RUN apt-get update && \
     apt-get install -y python-matplotlib emacs-nox git net-tools tree python-pip file nginx python-dev sudo htop locales locales-all wget fonts-dejavu && \
     pip install gevent psycogreen && \
