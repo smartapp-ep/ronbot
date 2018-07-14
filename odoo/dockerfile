@@ -53,6 +53,7 @@ RUN git clone -b $version https://github.com/OCA/runbot-addons.git /mnt/runbot-a
     # pip install --upgrade git+https://github.com/oca/pylint-odoo.git && \
     git clone https://github.com/odoo/odoo-extra.git /mnt/odoo-extra && \
     rm -rf /mnt/odoo-extra/website_twitter_wall
+    cp runbot.py /mnt/odoo-extra/runbot/
 
 # grant access to work dir
 RUN chown odoo:odoo -R /mnt/odoo-extra/runbot/static/
