@@ -3,3 +3,5 @@ MAINTAINER Camptocamp
 
 COPY etc/odoo_params.conf /etc/nginx/
 COPY etc/nginx.conf /etc/nginx/
+
+EXPOSE 80 8080
