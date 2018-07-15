@@ -86,6 +86,8 @@ RUN true && \
     # addons_path:
     sed -i -e "s;addons_path.*;addons_path = /mnt/odoo-extra,/mnt/extra-addons,/mnt/runbot-addons,/usr/lib/python2.7/dist-packages/openerp/addons;" /etc/odoo/openerp-server.conf
 
+EXPOSE 8080
+
 VOLUME ["/mnt/odoo-extra", "/mnt/runbot-addons"]
 
 CMD ["openerp-server", "--database=runbot", "--db-filter=^runbot$", "--workers=2"]
