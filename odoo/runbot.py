@@ -942,7 +942,8 @@ class runbot_build(osv.osv):
                 "--db_host=db-runbot",
                 "--db_user=odoo",
                 "--db_password=odoo",
-				"--addons-path=%s/addons" % build._path('odoo'),
+		"--addons-path=%s/addons" % build._path('odoo'),
+		"--load-language zh_CN",
             ]
             # options
             if grep(build._server("tools/config.py"), "no-xmlrpcs"):
