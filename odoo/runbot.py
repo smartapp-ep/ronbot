@@ -155,7 +155,8 @@ def uniq_list(l):
     return OrderedDict.fromkeys(l).keys()
 
 def fqdn():
-    return socket.getfqdn()
+    # return socket.getfqdn()
+	return "runbot.kjerp.com.cn"
 
 @contextlib.contextmanager
 def local_pgadmin_cursor():
